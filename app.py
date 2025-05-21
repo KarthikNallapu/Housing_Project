@@ -1,12 +1,11 @@
 import streamlit as st
 import pandas as pd
-import pickle
+from joblib import load  # ✅ Use joblib instead of pickle
 
 # Load model and data
 @st.cache_resource
 def load_model():
-    with open('hyderabad_housing_model.pkl', 'rb') as f:
-        return pickle.load(f)
+    return load('hyderabad_housing_model.pkl')  # ✅ Load using joblib
 
 @st.cache_data
 def load_data():

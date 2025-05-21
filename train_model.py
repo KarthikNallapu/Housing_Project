@@ -8,6 +8,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import pickle
+from joblib import dump
 import matplotlib.pyplot as plt
 
 # Load and clean data
